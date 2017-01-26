@@ -1,0 +1,7 @@
+.mh/
+debhelper-build-stamp
+files
+libjackson2-core-java.substvars
+libjackson2-core-java/
+maven-repo/
+stamp-poms-patched

@@ -3,7 +3,7 @@
 VERSION_FILE=src/main/java/com/fasterxml/jackson/core/json/PackageVersion.java
 
 %:
-	dh $@
+	dh $@ --buildsystem=maven
 
 override_dh_auto_configure:
 	sh debian/replace-generate.sh $(VERSION_FILE)

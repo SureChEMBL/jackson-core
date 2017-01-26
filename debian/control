@@ -6,16 +6,14 @@ Uploaders:
  Hilko Bengen <bengen@debian.org>,
  Wolodja Wentland <debian@babilen5.org>
 Build-Depends:
- debhelper (>= 10),
+ debhelper (>= 9),
  default-jdk,
  maven-debian-helper (>= 1.6.5),
  libmaven-install-plugin-java,
  xmlstarlet
 Build-Depends-Indep:
- default-jdk-doc,
  junit4,
  libmaven-bundle-plugin-java,
- libmaven-javadoc-plugin-java,
  libreplacer-java
 Standards-Version: 3.9.8
 Vcs-Git: https://anonscm.debian.org/git/pkg-java/jackson-core.git
@@ -26,7 +24,6 @@ Package: libjackson2-core-java
 Architecture: all
 Depends: ${misc:Depends}, ${maven:Depends}
 Recommends: ${maven:OptionalDepends}
-Suggests: libjackson2-core-java-doc
 Description: fast and powerful JSON library for Java -- core library
  The Jackson Data Processor is a multi-purpose Java library for processing
  JSON. Jackson aims to be the best possible combination of fast, correct,
@@ -42,25 +39,3 @@ Description: fast and powerful JSON library for Java -- core library
  additional data types or JVM languages.
  .
  This package contains the Jackson core library.
-
-Package: libjackson2-core-java-doc
-Architecture: all
-Section: doc
-Depends: ${misc:Depends}, ${maven:DocDepends}
-Recommends: ${maven:DocOptionalDepends}
-Suggests: libjackson2-core-java
-Description: Documentation for Jackson-core
- The Jackson Data Processor is a multi-purpose Java library for processing
- JSON. Jackson aims to be the best possible combination of fast, correct,
- lightweight, and ergonomic for developers. It offers three alternative methods
- for processing JSON:
- .
-  * Streaming API inspired by StAX
-  * Tree Model
-  * Data Binding converts JSON to and from POJOs
- .
- In addition to the core library, there are numerous extension that provide
- additional functionality such as additional data formats beyond JSON,
- additional data types or JVM languages.
- .
- This package contains the API documentation of libjackson2-core-java.
