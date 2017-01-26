@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+VERSION_FILE=src/main/java/com/fasterxml/jackson/core/json/PackageVersion.java
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	sh debian/replace-generate.sh $(VERSION_FILE)
+	dh_auto_configure
+
+override_dh_auto_install:
+	dh_auto_install
+
+	# Install the parent poms (used by the other jackson packages)
+	mh_installpom -plibjackson2-core-java --keep-elements=build debian/oss-parent-27.pom
+	mh_installpom -plibjackson2-core-java --keep-elements=build debian/jackson-parent-2.8.pom
+	mh_installpom -plibjackson2-core-java --keep-elements=build debian/jackson-bom-2.8.5.1.pom
+
+override_dh_auto_clean:
+	rm -f $(VERSION_FILE)
+	dh_auto_clean
+
+override_dh_installchangelogs:
+	dh_installchangelogs release-notes/VERSION

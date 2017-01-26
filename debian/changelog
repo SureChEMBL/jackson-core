@@ -1,0 +1,54 @@
+jackson-core (2.8.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 16 Jan 2017 01:43:44 +0100
+
+jackson-core (2.8.5-2) unstable; urgency=medium
+
+  * Team upload.
+  * Install the jackson-bom POM
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 16 Dec 2016 00:47:22 +0100
+
+jackson-core (2.8.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Install the jackson-parent POM
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 15 Dec 2016 15:35:09 +0100
+
+jackson-core (2.7.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Removed the build dependency on libmaven-scm-java
+  * Standards-Version updated to 3.9.8 (no changes)
+  * Use secure Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 08 Apr 2016 11:25:38 +0200
+
+jackson-core (2.4.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * control: Bump policy, no changes.
+  * maven.{publishedR,r}ules: Fix version mangling.
+  * fix-using-bundle.diff: Use extensions with bundle plugin.
+  * control: Add libmaven-bundle-plugin-java to build-deps.
+  * depend-on-junit.diff: Prevent needing jackson-parent, add a dependency
+    on junit to pom.xml.
+  * properties: Set encoding to UTF-8.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 24 Sep 2014 16:37:59 +0300
+
+jackson-core (2.2.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #719323)
+
+ -- Wolodja Wentland <debian@babilen5.org>  Sat, 10 Aug 2013 19:27:10 +0000
